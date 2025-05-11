@@ -185,7 +185,7 @@ function startAutoUpdate() {
   
   // Убран лишний блок кода
   updateNextCompany();
-  updateInterval.value = setInterval(updateNextCompany, 15000);
+  updateInterval.value = setInterval(updateNextCompany, 10000);
 }
 
 //auto apdate
@@ -196,7 +196,7 @@ function startAutoUpdate() {
   updateNextCompany();
   
   // Затем устанавливаем интервал для поочередного обновления
-  updateInterval.value = setInterval(updateNextCompany, 15000); // 10 секунд
+  updateInterval.value = setInterval(updateNextCompany, 10000); // 10 секунд
 }
 
 
@@ -254,7 +254,7 @@ async function updateNextCompany() {
           'Authorization': `Bearer bFmL8oJNXMi6kEI3koTgLAAUmj5P7xcJ`,
           'Content-Type': 'application/json'
         },
-        timeout: 15000
+        timeout: 10000
       }
     );
     return response.data.choices[0].message.content;
